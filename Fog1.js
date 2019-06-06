@@ -28,195 +28,216 @@
   setDropdownDays();
   setDropdownMove();
   setDropdownChild();
+
+//Dropdown for days
   function setDropdownDays(){ 
  
-  var list =[sat, sun, Mon,sat_mon,sun_mon, sat_sun];
-   var dynamicList = Sheet2.getRange("K2:K"+Sheet2.getLastRow());
-   var arrayValues = dynamicList.getValues();
-   var rangeRule = app.newDataValidation().requireValueInList(list);
-   // set the dropdown validation for the row
-   Sheet2.getRange("K2:K"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
-   dynamicList = Sheet3.getRange("K2:K"+Sheet3.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   Sheet3.getRange("K2:K"+Sheet3.getLastRow()).setDataValidation(rangeRule);
-}
+	  var list =[sat, sun, Mon,sat_mon,sun_mon, sat_sun];
+	   var dynamicList = Sheet2.getRange("K2:K"+Sheet2.getLastRow());
+	   var arrayValues = dynamicList.getValues();
+	   var rangeRule = app.newDataValidation().requireValueInList(list);
+	   // set the dropdown validation for the row
+	   Sheet2.getRange("K2:K"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
+	   dynamicList = Sheet3.getRange("K2:K"+Sheet3.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   Sheet3.getRange("K2:K"+Sheet3.getLastRow()).setDataValidation(rangeRule);
+	}
 
+
+//Dropdown for bus and car
 function setDropdownMove(){   
  
-  var list =[bus,car];
-   var dynamicList = Sheet2.getRange("I2:I"+Sheet2.getLastRow());
-   var arrayValues = dynamicList.getValues();
-   var rangeRule = app.newDataValidation().requireValueInList(list);
-   // set the dropdown validation for the row
-   Sheet2.getRange("I2:I"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
-   dynamicList = Sheet3.getRange("I2:I"+Sheet3.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   Sheet3.getRange("I2:I"+Sheet3.getLastRow()).setDataValidation(rangeRule);
-   
-   dynamicList = Sheet2.getRange("J2:J"+Sheet2.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   // set the dropdown validation for the row
-   Sheet2.getRange("J2:J"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
-   dynamicList = Sheet3.getRange("J2:J"+Sheet3.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   Sheet3.getRange("J2:J"+Sheet3.getLastRow()).setDataValidation(rangeRule);
+	   var list =[bus,car];
+	   var dynamicList = Sheet2.getRange("I2:I"+Sheet2.getLastRow());
+	   var arrayValues = dynamicList.getValues();
+	   var rangeRule = app.newDataValidation().requireValueInList(list);
+	   // set the dropdown validation for the row
+	   Sheet2.getRange("I2:I"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
+	   dynamicList = Sheet3.getRange("I2:I"+Sheet3.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   Sheet3.getRange("I2:I"+Sheet3.getLastRow()).setDataValidation(rangeRule);
+	   
+	   dynamicList = Sheet2.getRange("J2:J"+Sheet2.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   // set the dropdown validation for the row
+	   Sheet2.getRange("J2:J"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
+	   dynamicList = Sheet3.getRange("J2:J"+Sheet3.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   Sheet3.getRange("J2:J"+Sheet3.getLastRow()).setDataValidation(rangeRule);
 }
 
+
+//drop down for children options
 function setDropdownChild(){   
  
-  var list =[full,half,zero, ""];
-   var dynamicList = Sheet2.getRange("T2:T"+Sheet2.getLastRow());
-   var arrayValues = dynamicList.getValues();
-   var rangeRule = app.newDataValidation().requireValueInList(list);
-   // set the dropdown validation for the row
-   Sheet2.getRange("T2:T"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
-   dynamicList = Sheet3.getRange("T2:T"+Sheet3.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   Sheet3.getRange("T2:T"+Sheet3.getLastRow()).setDataValidation(rangeRule);
-   
-   dynamicList = Sheet2.getRange("W2:W"+Sheet2.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   // set the dropdown validation for the row
-   Sheet2.getRange("W2:W"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
-   dynamicList = Sheet3.getRange("W2:W"+Sheet3.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   Sheet3.getRange("W2:W"+Sheet3.getLastRow()).setDataValidation(rangeRule);
-   
-   dynamicList = Sheet2.getRange("Z2:Z"+Sheet2.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   // set the dropdown validation for the row
-   Sheet2.getRange("Z2:Z"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
-   dynamicList = Sheet3.getRange("Z2:Z"+Sheet3.getLastRow());
-   arrayValues = dynamicList.getValues();
-   rangeRule = app.newDataValidation().requireValueInList(list);
-   Sheet3.getRange("Z2:Z"+Sheet3.getLastRow()).setDataValidation(rangeRule);
-}
+	   var list =[full,half,zero, ""];
+	   var dynamicList = Sheet2.getRange("T2:T"+Sheet2.getLastRow());
+	   var arrayValues = dynamicList.getValues();
+	   var rangeRule = app.newDataValidation().requireValueInList(list);
+	   // set the dropdown validation for the row
+	   Sheet2.getRange("T2:T"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
+	   dynamicList = Sheet3.getRange("T2:T"+Sheet3.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   Sheet3.getRange("T2:T"+Sheet3.getLastRow()).setDataValidation(rangeRule);
+	   
+	   dynamicList = Sheet2.getRange("W2:W"+Sheet2.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   // set the dropdown validation for the row
+	   Sheet2.getRange("W2:W"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
+	   dynamicList = Sheet3.getRange("W2:W"+Sheet3.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   Sheet3.getRange("W2:W"+Sheet3.getLastRow()).setDataValidation(rangeRule);
+	   
+	   dynamicList = Sheet2.getRange("Z2:Z"+Sheet2.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   // set the dropdown validation for the row
+	   Sheet2.getRange("Z2:Z"+Sheet2.getLastRow()).setDataValidation(rangeRule); // set range to your range
+	   dynamicList = Sheet3.getRange("Z2:Z"+Sheet3.getLastRow());
+	   arrayValues = dynamicList.getValues();
+	   rangeRule = app.newDataValidation().requireValueInList(list);
+	   Sheet3.getRange("Z2:Z"+Sheet3.getLastRow()).setDataValidation(rangeRule);
+	}
 
    //on Sheet edit to edit Expected and statistics
 function onEdit(e) 
 {
-if(e.source.getActiveSheet().getName()=="IN")
-{
-var range=e.range;
-var row=range.getRow();
+	if(e.source.getActiveSheet().getName()=="IN")
+	{
+		var range=e.range;
+		var row=range.getRow();
 
-if(row!=1)
-{
- Sheet2.getRange(row, 2).setValue(calculate(Sheet2,row));  //editing expected value
-  
- if(parseInt(Sheet2.getRange(row, 2).getValue())==parseInt(Sheet2.getRange(row, 3).getValue()))
- { Sheet2.getRange(row, 3).setBackgroundColor('#0FFF00');}   
-else if((parseInt(Sheet2.getRange(row, 3).getValue())<parseInt(Sheet2.getRange(row, 2).getValue()))&&(Sheet2.getRange(row, 7).getValue()!=Exchange))  
-{ Sheet2.getRange(row, 3).setBackgroundColor('#FF0000');}
-  else if(parseInt(Sheet2.getRange(row, 3).getValue())>parseInt(Sheet2.getRange(row, 2).getValue()))
-  {
-    Sheet2.getRange(row, 3).setBackgroundColor('#FFFF00');
-  }
-  else if((parseInt(Sheet2.getRange(row, 3).getValue())<parseInt(Sheet2.getRange(row, 2).getValue()))&&(Sheet2.getRange(row, 7).getValue()==Exchange)) 
-{ Sheet2.getRange(row, 3).setBackgroundColor('#A9A9A9');}
-  
-    else
-    {   
-      Sheet2.getRange(row, 3).setBackgroundColor('#FFFFFF');
-  }
-  //Statistcs edit
-  Statistics();
-  }
-  
-   
-  }
+	if(row!=1)
+	{
+	 	Sheet2.getRange(row, 2).setValue(calculate(Sheet2,row));  //editing expected value
+	  
+	  //Colors for the paid cell
+	 if(parseInt(Sheet2.getRange(row, 2).getValue())==parseInt(Sheet2.getRange(row, 3).getValue()))
+	 { 
+	 	Sheet2.getRange(row, 3).setBackgroundColor('#0FFF00');
+	 }   
+	else if((parseInt(Sheet2.getRange(row, 3).getValue())<parseInt(Sheet2.getRange(row, 2).getValue()))&&(Sheet2.getRange(row, 7).getValue()!=Exchange))  
+	{ 
+		Sheet2.getRange(row, 3).setBackgroundColor('#FF0000');
+	}
+	 else if(parseInt(Sheet2.getRange(row, 3).getValue())>parseInt(Sheet2.getRange(row, 2).getValue()))
+	 {
+	    Sheet2.getRange(row, 3).setBackgroundColor('#FFFF00');
+	 }
+	  else if((parseInt(Sheet2.getRange(row, 3).getValue())<parseInt(Sheet2.getRange(row, 2).getValue()))&&(Sheet2.getRange(row, 7).getValue()==Exchange)) 
+	{ 
+		Sheet2.getRange(row, 3).setBackgroundColor('#A9A9A9');
+	}
+	  
+	else
+	{   
+	      Sheet2.getRange(row, 3).setBackgroundColor('#FFFFFF');
+	}
+	  //Statistcs edit
+	  Statistics();
+	  }
+	  
+	   
+	 }
 
 
-if(e.source.getActiveSheet().getName()=="Waiting")
-{
-var range=e.range;
-var row=range.getRow();
+	if(e.source.getActiveSheet().getName()=="Waiting")
+	{
+	var range=e.range;
+	var row=range.getRow();
 
-if(row!=1)
-{
- Sheet3.getRange(row, 2).setValue(calculate(Sheet3,row));  //editing expected value
-  
- if(parseInt(Sheet3.getRange(row, 2).getValue())==parseInt(Sheet3.getRange(row, 3).getValue()))
- { Sheet3.getRange(row, 3).setBackgroundColor('#0FFF00');}   
- else if((parseInt(Sheet3.getRange(row, 3).getValue())<parseInt(Sheet3.getRange(row, 2).getValue()))&&(Sheet3.getRange(row, 7).getValue()!=Exchange))
-  { Sheet3.getRange(row, 3).setBackgroundColor('#FF0000');}
-  
-  else if((parseInt(Sheet3.getRange(row, 3).getValue())<parseInt(Sheet3.getRange(row, 2).getValue()))&&(Sheet3.getRange(row, 7).getValue()==Exchange))
-  { Sheet3.getRange(row, 3).setBackgroundColor('#A9A9A9');}
-  else if(parseInt(Sheet3.getRange(row, 3).getValue())>parseInt(Sheet3.getRange(row, 2).getValue()))
-  {
-    Sheet3.getRange(row, 3).setBackgroundColor('#FFFF00');
-  }
-    else
-    {   
-      Sheet3.getRange(row, 3).setBackgroundColor('#FFFFFF');
-  }
-  //Statistcs edit
-  Statistics();
-  }
- 
-  
-}
+	if(row!=1)
+	{
+	 Sheet3.getRange(row, 2).setValue(calculate(Sheet3,row));  //editing expected value
+	  
+	 if(parseInt(Sheet3.getRange(row, 2).getValue())==parseInt(Sheet3.getRange(row, 3).getValue()))
+	 { 
+	 	Sheet3.getRange(row, 3).setBackgroundColor('#0FFF00');
+	 }   
+	 else if((parseInt(Sheet3.getRange(row, 3).getValue())<parseInt(Sheet3.getRange(row, 2).getValue()))&&(Sheet3.getRange(row, 7).getValue()!=Exchange))
+	  { 
+	  	Sheet3.getRange(row, 3).setBackgroundColor('#FF0000');
+	  }
+	  
+	  else if((parseInt(Sheet3.getRange(row, 3).getValue())<parseInt(Sheet3.getRange(row, 2).getValue()))&&(Sheet3.getRange(row, 7).getValue()==Exchange))
+	  { 
+	  	Sheet3.getRange(row, 3).setBackgroundColor('#A9A9A9');
+	  }
+	  else if(parseInt(Sheet3.getRange(row, 3).getValue())>parseInt(Sheet3.getRange(row, 2).getValue()))
+	  {
+	    Sheet3.getRange(row, 3).setBackgroundColor('#FFFF00');
+	  }
+	   else
+	   {   
+	      Sheet3.getRange(row, 3).setBackgroundColor('#FFFFFF');
+	   }
+	  //Statistcs edit
+	  Statistics();
+	  }
+	 
+	  
+	}
 
-var the_range = e.range;
-if((the_range.getRow()==1)&& (the_range.getColumn()==3) &&(e.source.getActiveSheet().getName()=="Statistics"))
-{
-  if(parseInt(Sheet4.getRange(1,3).getValue())-parseInt(e.oldValue)>5)
-  {
-    Sheet4.getRange(1,3).setValue(e.oldValue);
-    var name=Browser.msgBox('Large amount', 'Please dont increase max fog number more than 5 at a time', Browser.Buttons.OK);
-  }
-  if (parseInt(Sheet4.getRange(1,3).getValue())<parseInt(e.oldValue))
-  {
-      var name=Browser.msgBox('Decreasing', 'Decreasing Max fog amount doesnt sent from IN to waiting you should change it by your self', Browser.Buttons.OK);
+	var the_range = e.range;
+	if((the_range.getRow()==1)&& (the_range.getColumn()==3) &&(e.source.getActiveSheet().getName()=="Statistics"))
+	{
+	  if(parseInt(Sheet4.getRange(1,3).getValue())-parseInt(e.oldValue)>5)
+	  {
+	    Sheet4.getRange(1,3).setValue(e.oldValue);
+	    var name=Browser.msgBox('Large amount', 'Please dont increase max fog number more than 5 at a time', Browser.Buttons.OK);
+	  }
 
-  }
-        var name=Browser.msgBox('Saved', 'New Max Fog amount saved successfully', Browser.Buttons.OK);
+	  if (parseInt(Sheet4.getRange(1,3).getValue())<parseInt(e.oldValue))
+	  {
+	      var name=Browser.msgBox('Decreasing', 'Decreasing Max fog amount doesnt sent from IN to waiting you should change it by your self', Browser.Buttons.OK);
 
-}
+	  }
+	   
+	   var name=Browser.msgBox('Saved', 'New Max Fog amount saved successfully', Browser.Buttons.OK);
 
-/*
-  **3ashan 5ater Mariam** 
-  */
-  //Sending from waiting
-   Statistics();
-   var flag=0;
-    while(Sheet3.getLastRow()>1)      //Check if there is someone waiting
-  { 
-    if(adults+children<max)        //Make Sure there is an empty place in the IN sheet
-    {
-      flag=1;
-    if((max-adults-children==1)&&( Sheet3.getRange(2, 20).getValue()==full||Sheet3.getRange(2, 23).getValue()==full||Sheet3.getRange(2, 26).getValue()==full))
-   {break;}
-   else
-   {
-   var source_range = Sheet3.getRange("A"+2+":AA"+2);
-    var target_range = Sheet2.getRange("A"+(Sheet2.getLastRow()+1)+":AA"+(Sheet2.getLastRow()+1));
-  source_range.moveTo(target_range);
- // Sheet3.getRange("A3:AA").moveTo(Sheet3.getRange("A2:AA"));
- Sheet3.deleteRow(2);
-    Statistics();
-    //sleep(500);
-  }
-    }
-    else
-    {
-    break;
-    }
-  }
-   Statistics();
-    if(flag==1)
-  var name=Browser.msgBox('Done', 'Waiting insertion is done', Browser.Buttons.OK);
-   
-   //end send from waiting
+	}
+
+	/*
+	  **3ashan 5ater Mariam** 
+	  */
+	  //Sending from waiting
+	   Statistics();
+	   var flag=0;
+	    while(Sheet3.getLastRow()>1)      //Check if there is someone waiting
+	  { 
+		    if(adults+children<max)        //Make Sure there is an empty place in the IN sheet
+		    {
+			      flag=1;
+			    if((max-adults-children==1)&&( Sheet3.getRange(2, 20).getValue()==full||Sheet3.getRange(2, 23).getValue()==full||Sheet3.getRange(2, 26).getValue()==full))
+			   {break;}
+			   else
+			   {
+				   	var source_range = Sheet3.getRange("A"+2+":AA"+2);
+				    var target_range = Sheet2.getRange("A"+(Sheet2.getLastRow()+1)+":AA"+(Sheet2.getLastRow()+1));
+				  	source_range.moveTo(target_range);
+				 	// Sheet3.getRange("A3:AA").moveTo(Sheet3.getRange("A2:AA"));
+				 	Sheet3.deleteRow(2);
+				   	Statistics();
+				   //sleep(500);
+			  }
+		    }
+		    else
+		    {
+		    break;
+		    }
+	  }
+	   Statistics();
+	    if(flag==1)
+	  		var name=Browser.msgBox('Done', 'Waiting insertion is done', Browser.Buttons.OK);
+	   
+	   //end send from waiting
 
 }
 
@@ -226,34 +247,34 @@ function onChange(e)
 {
   if(e.changeType=="REMOVE_ROW"||e.changeType=="REMOVE_GRID")
   {
- Statistics();
- var flag=0;
-    while(Sheet3.getLastRow()>1)      //Check if there is someone waiting
-  { 
-    if(adults+children<max)        //Make Sure there is an empty place in the IN sheet
-    {
-      flag=1;
-    if((max-adults-children==1)&&( Sheet3.getRange(2, 20).getValue()==full||Sheet3.getRange(2, 23).getValue()==full||Sheet3.getRange(2, 26).getValue()==full))
-   {break;}
-   else
-   {
-   var source_range = Sheet3.getRange("A"+2+":AA"+2);
-    var target_range = Sheet2.getRange("A"+(Sheet2.getLastRow()+1)+":AA"+(Sheet2.getLastRow()+1));
-  source_range.moveTo(target_range);
-  //Sheet3.getRange("A3:AD").moveTo(Sheet3.getRange("A2:AD"));
-   Sheet3.deleteRow(2);
-    Statistics();
-    stat();
-  }
-    }
-    else
-    {
-    break;
-    }
-  }
-  if(flag==1)
-  var name=Browser.msgBox('Done', 'Waiting insertion is done', Browser.Buttons.OK);
-   Statistics();
+		Statistics();
+		 var flag=0;
+		    while(Sheet3.getLastRow()>1)      //Check if there is someone waiting
+		  { 
+		    if(adults+children<max)        //Make Sure there is an empty place in the IN sheet
+		    {
+		      flag=1;
+		    if((max-adults-children==1)&&( Sheet3.getRange(2, 20).getValue()==full||Sheet3.getRange(2, 23).getValue()==full||Sheet3.getRange(2, 26).getValue()==full))
+		   {break;}
+		   else
+		   {
+			   var source_range = Sheet3.getRange("A"+2+":AA"+2);
+			    var target_range = Sheet2.getRange("A"+(Sheet2.getLastRow()+1)+":AA"+(Sheet2.getLastRow()+1));
+			  source_range.moveTo(target_range);
+			  //Sheet3.getRange("A3:AD").moveTo(Sheet3.getRange("A2:AD"));
+			  Sheet3.deleteRow(2);
+			  Statistics();
+			  stat();
+		  }
+		    }
+		    else
+		    {
+		    	break;
+		    }
+		  }
+		  if(flag==1)
+		  var name=Browser.msgBox('Done', 'Waiting insertion is done', Browser.Buttons.OK);
+		   Statistics();
   }
 }
 
